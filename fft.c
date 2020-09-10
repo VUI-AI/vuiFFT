@@ -1,21 +1,15 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include <string.h>
+#include "fft.h"
+
+typedef unsigned char        UWord8;
 
 #define N 256
 #define bool _Bool
 #define OVS 889516850
 #define DOVS 1779033700
 #define SHN  31
-
-typedef unsigned char		UWord8;
-
-typedef struct
-{	
-  int real;
-  int imag;
-} COMPLEX;
-
 
 COMPLEX wn[N/2] = 
 {
@@ -229,26 +223,3 @@ void fft_c(COMPLEX *x) {
 
 }
 
-
-
-// int main(){
-//    COMPLEX XXX[N];
-//    for(int i=0; i<N; i++) 
-//    {
-// 		XXX[i].real = 1;
-// 		XXX[i].imag = 0;
-// 		printf("%d   ", XXX[i].real);
-// 		printf("%d\n", XXX[i].imag);
-//    }
-
-//    fft_c(XXX);
-
-// 	for(int i=0; i<N; i++) 
-//    {
-// 		printf("%d   ", XXX[i].real);
-// 		printf("%d\n", XXX[i].imag);
-//    }
-
-// 	return 0;
-
-// }
