@@ -19,8 +19,7 @@ int main(){
 
      for(int i=0; i<BUFFSIZE; i++)
      {
-          XXX[i].real = inBuf[i]; //test value
-          printf("%d   ", XXX[i].real);
+          XXX[i].real = inBuf[i]; //first frame value from file
      }
 
      fft_c(XXX);
