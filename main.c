@@ -7,7 +7,7 @@
 
 short inBuf[BUFFSIZE];
 FILE *inFileHdlr = NULL;
-char inFilename[1024] = "test.raw";
+char inFilename[1024] = "testFFT_short_8.txt";
 
 
 int main(){
@@ -20,6 +20,7 @@ int main(){
      for(int i=0; i<BUFFSIZE; i++)
      {
           XXX[i].real = inBuf[i]; //first frame value from file
+          printf("%d   \n", XXX[i].real);
      }
 
      fft_c(XXX);
